@@ -158,7 +158,7 @@ func UTCTimeStamp(currentTime uint64) []byte {
 //GeneralDeviceCapabilities : Generates General Device Capabilities
 func GeneralDeviceCapabilities() []byte {
 	numOfAntennas := 52
-	//totalReceiveSensitivities := 42
+	totalReceiveSensitivities := 2
 	length := 28 // 28 + totalReceiveSensitivities*8 + 8 + numOfAntennas*9
 	var data = []interface{}{
 		uint16(137),           //Type 137
