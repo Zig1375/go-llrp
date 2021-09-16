@@ -173,13 +173,13 @@ func GeneralDeviceCapabilities() []byte {
 	}
 	x := Pack(data)
 
-	// for i := 1; i <= totalReceiveSensitivities; i++ {
-	// 	x = append(x, ReceiveSensitivityEntry(uint16(i))...)
-	// }
-	// x = append(x, GPIOCapabilities()...)
-	// for i := 1; i <= numOfAntennas; i++ {
-	// 	x = append(x, ReceiveSensitivityEntry(uint16(i))...)
-	// }
+	 for i := 1; i <= totalReceiveSensitivities; i++ {
+	 	x = append(x, ReceiveSensitivityEntry(uint16(i))...)
+	 }
+	 x = append(x, GPIOCapabilities()...)
+	 for i := 1; i <= numOfAntennas; i++ {
+	 	x = append(x, ReceiveSensitivityEntry(uint16(i))...)
+	 }
 
 	return x
 }
